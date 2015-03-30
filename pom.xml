@@ -48,11 +48,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<arguments>
-						<argument>--spring.profiles.active=prod</argument>
-					</arguments>
-				</configuration>
 				<executions>
 					<execution>
 						<goals>
@@ -65,6 +60,11 @@
 	</build>
 
 	<dependencies>
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-core</artifactId>
+			<version>1.55.0</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -104,6 +104,11 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>1.2.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 </project>
